@@ -1,0 +1,5 @@
+// Helper function
+// Return null rather than throwing an error if index is outside list range.
+@function nth-or-null($list, $index) {
+    @return if(length($list) >= $index, nth($list, $index), null);
+}

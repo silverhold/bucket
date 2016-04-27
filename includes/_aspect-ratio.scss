@@ -1,0 +1,19 @@
+@mixin aspect-ratio($arglist... /*$ratio or $width, $height*/) {
+  $map: keywords($arglist);
+  $height: map-get($map, height) or nth-or-null($arglist, 2);
+  $width: map-get($map, width) or nth-or-null($arglist, 1);
+  $ratio: map-get($map, ratio) or if($width and $height, $width / $height, nth-or-null($arglist, 1)) or 1;
+  $padding: 1 / $ratio * 100%;
+
+  &::before {
+    content: '';
+    float: left;
+    padding-bottom: $padding;
+  }
+
+  &::after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+}

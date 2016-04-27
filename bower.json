@@ -1,0 +1,21 @@
+{
+  "name": "trowel-bucket",
+  "homepage": "https://github.com/Trowel/bucket",
+  "authors": [
+    "Loïc Goyet <loic@appventus.com>"
+  ],
+  "description": "A trowel component with a bunch of different type of helpers",
+  "main": "bucket.scss",
+  "keywords": [
+    "sass",
+    "helpers"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
