@@ -1,0 +1,24 @@
+{
+  "name": "bucket",
+  "version": "1.2.0",
+  "description": "Sass mixins and function helpers for any case scenario",
+  "main": "bucket.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "generate-doc": "sassdoc includes"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Trowel/bucket.git"
+  },
+  "keywords": [
+    "sass",
+    "helpers"
+  ],
+  "author": "Loïc Goyet",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Trowel/bucket/issues"
+  },
+  "homepage": "https://github.com/Trowel/bucket#readme"
+}
