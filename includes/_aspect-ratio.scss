@@ -1,4 +1,20 @@
-@mixin aspect-ratio($arglist... /*$ratio or $width, $height*/) {
+/// Generate declarations in order to set the ratio width/height equals to the
+/// argument passed.
+/// @access public
+/// @author Jakob Eriksen
+/// @example
+///   .class { @include aspect-ratio(); }            // no arguments defaults to a 1:1 ratio
+///   .class { @include aspect-ratio(16, 9); }       // width and height
+///   .class { @include aspect-ratio(1.777778); }    // ratio (calculated width/height)
+///   .class { @include aspect-ratio(4px, 3px); }    // comparable units
+///   .class { @include aspect-ratio($ratio: 1.2); } // keywords
+/// @group code generator helpers
+/// @source http://codepen.io/jakob-e/pen/WvrJwN The original codepen it comes from
+/// @name aspect-ratio
+/// @output ::before and ::after elements css declarations
+/// @param {numbers | list} $ratio [1]
+/// @since 1.0.0
+@mixin aspect-ratio($arglist...) {
   $map: keywords($arglist);
   $height: map-get($map, height) or nth-or-null($arglist, 2);
   $width: map-get($map, width) or nth-or-null($arglist, 1);
