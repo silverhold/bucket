@@ -24,7 +24,7 @@
   margin-right: ceil(-$gutter / 2);
 
   @if $vertical {
-    margin-right: -$gutter;
+    margin-bottom: -$gutter;
   }
 }
 
