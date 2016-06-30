@@ -29,6 +29,10 @@
     $everything-okay: false;
   }
 
+  @if length($declarations) > 0 {
+    $everything-okay: false;
+  }
+
   @if $everything-okay {
     @each $property, $value in $declarations {
       @if type-of($property) == 'string' {
