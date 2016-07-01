@@ -29,7 +29,7 @@
     $everything-okay: false;
   }
 
-  @if length($declarations) > 0 {
+  @if length($declarations) == 0 {
     $everything-okay: false;
   }
 
