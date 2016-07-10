@@ -33,3 +33,26 @@
     display: table;
   }
 }
+
+
+@mixin aspect-ratio-responsive($values, $philosophy: 'mobile-first') {
+  @if mixin-exists(media-query) and function-exists(is-breakpoint) {
+    @if type-of($values) == 'map' {
+      @each $tag, $value in $values {
+        @if is-breakpoint($tag) {
+          @include media-query($tag, $philosophy) {
+            @include aspect-ratio($value);
+          }
+        } @elseif $tag == 'default' {
+          @include aspect-ratio($value);
+        } @else {
+          @error 'If the responsive-values mixin first param is a map, it must have as key a breakpoint-tag setted into the $breakpoints map or the "default" string';
+        }
+      }
+    } @else {
+      @include aspect-ratio($values);
+    }
+  } @else {
+    @error 'You cannot use this mixin without included first trowel-responsive';
+  }
+}
