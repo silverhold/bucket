@@ -27,3 +27,12 @@
     @content;
   }
 }
+
+/// Make a element specified selector a little more friendly
+/// @author Loïc Goyet
+/// @param {String} $tag
+@mixin when-tag($tag) {
+  @at-root #{$tag}#{&} {
+    @content;
+  }
+}
