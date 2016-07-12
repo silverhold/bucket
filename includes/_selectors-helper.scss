@@ -36,3 +36,11 @@
     @content;
   }
 }
+
+/// Semantic shortcut to select an element sibling itself
+/// @author Loïc Goyet
+@mixin when-sibling-itself {
+  & + & {
+    @content;
+  }
+}
