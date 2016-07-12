@@ -44,3 +44,25 @@
     @content;
   }
 }
+
+
+/// Help to set to a property a list of value sequentially with the :nth-child selector
+/// @author Loïc Goyet
+/// @param {String} $property - The property that will change sequentially
+/// @param {List} $values - The list of values applied one after another
+@mixin alternate-values($property, $values) {
+  @if type-of($values) == 'list' {
+    $length: length($values);
+
+    @for $index from 1 through $length {
+      $value: nth($values, $index);
+      @if $value != null {
+        &:nth-child(#{$length}n + #{$index}) {
+          #{$property}: $value;
+        }
+      }
+    }
+  } @elseif in-list(('number', 'string', 'color'), type-of($values)) {
+    #{$property}: $values;
+  }
+}
