@@ -66,3 +66,25 @@
     #{$property}: $values;
   }
 }
+
+/// Help to style placeholders
+/// @author Loïc Goyet
+/// @param {Map} $declarations - Map of declarations to generate with properties as key and value as... value.
+/// @require block-generator
+@mixin placeholder-block($declarations) {
+  // Firefox
+  &::-moz-placeholder {
+    opacity: 1; // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526
+    @include block-generator($declarations);
+  }
+
+  // Internet Explorer 10+
+  &:-ms-input-placeholder {
+    @include block-generator($declarations);
+  }
+
+  // Safari and Chrome
+  &::-webkit-input-placeholder {
+    @include block-generator($declarations);
+  }
+}
