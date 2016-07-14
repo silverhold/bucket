@@ -1,3 +1,7 @@
+/// Output declarations to reset <button> style
+/// @name reset-button
+/// @author Loïc Goyet
+/// @group resets
 @mixin reset-button {
   padding: 0;
   appearance: initial;
@@ -9,6 +13,10 @@
   }
 }
 
+/// Output declarations to reset <ul> style
+/// @name reset-list
+/// @author Loïc Goyet
+/// @group resets
 @mixin reset-list {
   list-style: none;
   padding-left: 0;

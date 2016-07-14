@@ -1,6 +1,5 @@
 /// Returns the square root of a number passed as argument.
 /// @name square-root
-/// @access public
 /// @author Mihai Vaduva
 /// @source http://www.antimath.info/css/sass-square-root-function/
 /// @group maths
@@ -24,7 +23,6 @@
 
 /// Returns a number value passed as argument without its unit
 /// @name strip-units
-/// @access public
 /// @author Hugo Giraudel
 /// @source https://css-tricks.com/snippets/sass/strip-unit-function/
 /// @group maths
@@ -40,7 +38,6 @@
 
 /// Returns the square value of a number (without unit) passed as argument.
 /// @name square
-/// @access public
 /// @author Loïc Goyet
 /// @group maths
 /// @param {numbers} $number
@@ -58,7 +55,6 @@
 /// Reminder : ab² + ac² = bc² on a right-angled triangle.
 /// We pass as argument ab and ac length, and the function returns bc length
 /// @name get-hypotenuse
-/// @access public
 /// @author Loïc Goyet
 /// @group maths
 /// @param {numbers} $ab - first side of the right-angled

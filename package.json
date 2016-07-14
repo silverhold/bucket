@@ -5,7 +5,7 @@
   "main": "bucket.scss",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "generate-doc": "sassdoc includes"
+    "generate-doc": "sassdoc ./ --config .sassdoc.yml"
   },
   "repository": {
     "type": "git",

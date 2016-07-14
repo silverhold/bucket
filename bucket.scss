@@ -1,10 +1,8 @@
-@import 'includes/helper-functions';
-
-@import 'includes/maths';
-@import 'includes/aspect-ratio';
-@import 'includes/style-truncate';
-@import 'includes/reset';
-@import 'includes/selectors-helper';
-@import 'includes/gutter';
-@import 'includes/block';
-@import 'includes/string-manipulations';
+@import 'partials/blocks';
+@import 'partials/box';
+@import 'partials/layouts';
+@import 'partials/lists';
+@import 'partials/maths';
+@import 'partials/resets';
+@import 'partials/selectors';
+@import 'partials/strings';

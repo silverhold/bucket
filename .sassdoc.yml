@@ -1,0 +1,20 @@
+dest: './sassdoc'
+
+exclude:
+  - ./sassdoc
+  - .*
+
+autofill:
+  - throw
+  - content
+  - require
+
+groups:
+  blocks: Block Generation API
+  box: Box-model Helpers API
+  layouts: Layout Helpers API
+  lists: List Helpers API
+  maths: Maths API
+  resets: Reset Tags API
+  selectors: Selector Helpers API
+  strings: String Helpers API

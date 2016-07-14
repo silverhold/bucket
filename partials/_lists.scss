@@ -1,0 +1,18 @@
+/// Return list value at index passed. Return null rather than throwing an error if index is outside list range.
+/// @param {List} $list
+/// @param {Number} $value
+/// @return {Number | String | List | Map | Boolean } List value or null if no values is found
+/// @group lists
+@function nth-or-null($list, $index) {
+  @return if(length($list) >= $index, nth($list, $index), null);
+}
+
+/// To quickly check if a value is a part of a list
+/// @author Loïc Goyet
+/// @param {List} $list - list of values
+/// @param $value - value to test
+/// @return {Bool} - if or not the $value param is in the $list param
+/// @group lists
+@function in-list($list, $value) {
+  @return index($list, $value) != null;
+}

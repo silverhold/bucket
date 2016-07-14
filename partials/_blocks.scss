@@ -1,5 +1,4 @@
 /// Generate list of declarations
-/// @access public
 /// @author Loïc Goyet
 /// @example
 ///   $pod--declarations: (
@@ -18,6 +17,7 @@
 ///     padding: 1em;
 ///     background-color: rgb(255, 0, 0);
 ///   }
+/// @group blocks
 /// @name block-generator
 /// @output one or several css declarations
 /// @param {map} $declarations

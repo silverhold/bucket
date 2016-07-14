@@ -1,6 +1,5 @@
 /// Generate declarations in order to set the ratio width/height equals to the
 /// argument passed.
-/// @access public
 /// @author Jakob Eriksen
 /// @example
 ///   .class { @include aspect-ratio(); }            // no arguments defaults to a 1:1 ratio
@@ -8,8 +7,8 @@
 ///   .class { @include aspect-ratio(1.777778); }    // ratio (calculated width/height)
 ///   .class { @include aspect-ratio(4px, 3px); }    // comparable units
 ///   .class { @include aspect-ratio($ratio: 1.2); } // keywords
-/// @group code generator helpers
-/// @source http://codepen.io/jakob-e/pen/WvrJwN The original codepen it comes from
+/// @group box
+/// @source http://codepen.io/jakob-e/pen/WvrJwN The original codepen demo
 /// @name aspect-ratio
 /// @output ::before and ::after elements css declarations
 /// @param {numbers | list} $ratio [1]
@@ -34,7 +33,24 @@
   }
 }
 
-
+/// Implement the aspect-ratio mixin with responsiveness. *This mixin needs
+/// trowel-responsive implemented to work.*
+/// @author Loïc Goyet
+/// @example
+///   $ratio: (
+///     'default': (16, 9),
+///     'sm': 4 / 3,
+///     'md': 1,
+///   );
+///
+///   .class {
+///     @include aspect-ratio-responsive($ratio);
+///   }
+/// @group box
+/// @name aspect-ratio-responsive
+/// @param {map} $values - The map with as key a responsive tag from trowel-responsive or 'default', and as value the $ratio param from aspect-ratio mixin.
+/// @param {string} $philosophy ['mobile-first'] - Which philosophy will be applied to the trowel-responsive's media-query mixin. Can be 'mobile-first', 'desktop-first', or 'restrictive'.
+/// @since 1.6.0
 @mixin aspect-ratio-responsive($values, $philosophy: 'mobile-first') {
   @if mixin-exists(media-query) and function-exists(is-breakpoint) {
     @if type-of($values) == 'map' {
@@ -55,4 +71,15 @@
   } @else {
     @error 'You cannot use this mixin without included first trowel-responsive';
   }
+}
+
+/// Generate declaration to make css truncate
+/// @author Chris Coyier
+/// @source https://css-tricks.com/snippets/css/truncate-string-with-ellipsis/
+/// @name style-truncate
+/// @group box
+@mixin style-truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

@@ -1,5 +1,4 @@
 /// Generate margin on left & right side for the row of a grid in order to setup a gutter
-/// @access public
 /// @author Loïc Goyet
 /// @example
 ///   .row {
@@ -13,7 +12,7 @@
 ///   .row {
 ///     @include gutter-row(25px, true); // for grid with vertical gutter space
 ///   }
-/// @group gutter mixins
+/// @group layouts
 /// @name gutter-row
 /// @output `margin-left`, `margin-right` & maybe `margin-bottom` declarations
 /// @param {numbers} $gutter [30px] - the gutter space expected into your grid
@@ -29,7 +28,6 @@
 }
 
 /// Generate padding or margin on left & right side for the col of a grid in order to setup a gutter
-/// @access public
 /// @author Loïc Goyet
 /// @example
 ///   .col {
@@ -47,7 +45,7 @@
 ///   .col {
 ///     @include gutter-col(25px, 'margin'); // to generate `margin` declarations instead of `padding`'s
 ///   }
-/// @group gutter mixins
+/// @group layouts
 /// @name gutter-col
 /// @output `margin-left` & `margin-right` or `padding-left` & `padding-right` declarations
 /// @param {numbers} $gutter [30px] - the gutter space expected into your grid
