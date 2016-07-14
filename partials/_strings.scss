@@ -5,6 +5,7 @@
 /// @param {String} $replace ('') - New value
 /// @return {String} - Updated string
 /// @group strings
+/// @since 1.5.0
 @function str-replace($string, $search, $replace: '') {
   $index: str-index($string, $search);
 
