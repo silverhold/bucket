@@ -11,12 +11,5 @@
 /// @param $value - value to test
 /// @return {Bool} - if or not the $value param is in the $list param
 @function in-list($list, $value) {
-  $length: length($list);
-  @for $index from 1 through length($list) {
-    @if nth($list, $index) == $value {
-      @return true;
-    }
-  }
-
-  @return false;
+  @return index($list, $value) != null;
 }
