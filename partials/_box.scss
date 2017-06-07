@@ -34,7 +34,7 @@
 }
 
 /// Implement the aspect-ratio mixin with responsiveness. *This mixin needs
-/// trowel-responsive implemented to work.*
+/// silverhold-responsive implemented to work.*
 /// @author Loïc Goyet
 /// @example
 ///   $ratio: (
@@ -48,8 +48,8 @@
 ///   }
 /// @group box
 /// @name aspect-ratio-responsive
-/// @param {map} $values - The map with as key a responsive tag from trowel-responsive or 'default', and as value the $ratio param from aspect-ratio mixin.
-/// @param {string} $philosophy ['mobile-first'] - Which philosophy will be applied to the trowel-responsive's media-query mixin. Can be 'mobile-first', 'desktop-first', or 'restrictive'.
+/// @param {map} $values - The map with as key a responsive tag from silverhold-responsive or 'default', and as value the $ratio param from aspect-ratio mixin.
+/// @param {string} $philosophy ['mobile-first'] - Which philosophy will be applied to the silverhold-responsive's media-query mixin. Can be 'mobile-first', 'desktop-first', or 'restrictive'.
 /// @since 1.6.0
 @mixin aspect-ratio-responsive($values, $philosophy: 'mobile-first') {
   @if mixin-exists(media-query) and function-exists(is-breakpoint) {
@@ -69,7 +69,7 @@
       @include aspect-ratio($values);
     }
   } @else {
-    @error 'You cannot use this mixin without included first trowel-responsive';
+    @error 'You cannot use this mixin without included first silverhold-responsive';
   }
 }
 

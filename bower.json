@@ -1,10 +1,10 @@
 {
-  "name": "trowel-bucket",
-  "homepage": "https://github.com/Trowel/bucket",
+  "name": "silverhold-bucket",
+  "homepage": "https://github.com/silverhold/bucket",
   "authors": [
     "Loïc Goyet <loic@appventus.com>"
   ],
-  "description": "A trowel component with a bunch of different type of helpers",
+  "description": "A silverhold component with a bunch of different type of helpers",
   "main": "bucket.scss",
   "keywords": [
     "sass",

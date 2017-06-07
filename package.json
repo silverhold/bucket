@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Trowel/bucket.git"
+    "url": "git+https://github.com/silverhold/bucket.git"
   },
   "keywords": [
     "sass",
@@ -18,7 +18,7 @@
   "author": "Loïc Goyet",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Trowel/bucket/issues"
+    "url": "https://github.com/silverhold/bucket/issues"
   },
-  "homepage": "https://github.com/Trowel/bucket#readme"
+  "homepage": "https://github.com/silverhold/bucket#readme"
 }
